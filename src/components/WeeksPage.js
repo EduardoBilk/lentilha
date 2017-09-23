@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import Title from './Title';
 import Counter from './Counter';
+
+const Wrapper = styled.div`
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(254, 203, 131, 0.5);
+`;
 
 class WeeksPage extends Component {
   constructor() {
@@ -11,10 +21,9 @@ class WeeksPage extends Component {
   }
   render() {
     return (
-      <div className="wrapper">
-        <Title name={this.state.name} />
+      <Wrapper>
         <Counter />
-      </div>
+      </Wrapper>
     );
   }
 }

@@ -18,7 +18,6 @@ class BottomBar extends Component {
   }
 
   select = index => {
-    console.log(index);
     this.setState({
       selectedIndex: index
     });

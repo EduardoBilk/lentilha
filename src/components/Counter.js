@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import moment from 'moment';
+
+const CounterText = styled.p`
+  font-size: 30px;
+  text-align: center;
+`;
+const MonthConvertedText = styled.p`
+  font-size: 15px;
+  text-align: center;
+`;
 
 class Counter extends Component {
   constructor(props) {
@@ -32,16 +42,13 @@ class Counter extends Component {
   render() {
     return (
       <div className="counter-wrapper">
-        <p>
-          {this.state.weeksCount}
-          <span> semanas e </span>
-          {this.state.daysCount}
-          <span> dia{this.state.daysCount > 1 ? 's' : ''} </span>
-        </p>
+        <CounterText>
+          Lentilha está com {this.state.weeksCount} semanas e {this.state.daysCount} dia{this.state.daysCount > 1 ? 's' : ''}
+        </CounterText>
 
-        <p>
-          ( aproximadamente {this.state.monthCount} {this.state.monthCount >= 2 ? 'meses' : 'mês'} )
-        </p>
+        <MonthConvertedText>
+          ( mais ou menos {this.state.monthCount} {this.state.monthCount >= 2 ? 'meses' : 'mês'} )
+        </MonthConvertedText>
       </div>
     );
   }

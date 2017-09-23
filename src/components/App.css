@@ -3,25 +3,10 @@ h1,
 p {
   font-family: 'Work Sans', sans-serif;
   font-weight: lighter;
-  color: black;
+  color: rgba(0, 0, 0, 0.8);
 }
-.wrapper {
-  height: 92vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 120, 0, 0.2);
-}
+
 body {
   padding: 0px;
   margin: 0px;
-}
-
-.counter-wrapper :first-child {
-  font-size: 30px;
-}
-.counter-wrapper:last-child {
-  font-size: 15px;
-  text-align: center;
 }
