@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+h1,
+p {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: lighter;
+  color: black;
+}
+.wrapper {
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 120, 0, 0.2);
+}
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.counter-wrapper :first-child {
+  font-size: 30px;
+}
+.counter-wrapper:last-child {
+  font-size: 15px;
+  text-align: center;
+}
