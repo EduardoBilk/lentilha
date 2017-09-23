@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import BottomBar from './BottomBar';
 import WeeksPage from './WeeksPage';
+import SexPage from './SexPage';
 import './App.css';
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
       <Router>
         <div>
           <Route exact path="/" component={WeeksPage} />
+          <Route path="/which-sex" component={SexPage} />
           <MuiThemeProvider>
             <div>
               <BottomBar />

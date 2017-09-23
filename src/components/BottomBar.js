@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router';
 import { BottomNavigation, BottomNavigationItem } from 'material-ui/BottomNavigation';
 import Paper from 'material-ui/Paper';
 import VenusMarsIco from './VenusMarsIcon';
@@ -17,9 +18,15 @@ class BottomBar extends Component {
   }
 
   select = index => {
+    console.log(index);
     this.setState({
       selectedIndex: index
     });
+    if (index) {
+      this.props.history.push('/');
+    } else {
+      this.props.history.push('/which-sex');
+    }
   };
   render() {
     return (
@@ -33,4 +40,4 @@ class BottomBar extends Component {
     );
   }
 }
-export default BottomBar;
+export default withRouter(BottomBar);
