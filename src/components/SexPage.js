@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Chart from './Chart';
-import ButtonGroup from './ButtonGroup';
 import { db } from '../firebaseConfig';
 
 const Wrapper = styled.div`
   height: 92vh;
   display flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgba(254, 203, 131, 0.3);
@@ -50,7 +50,6 @@ class SexPage extends Component {
           height2={this.state.fHeight}
           bg2="rgba(239, 193, 187, 1.0)"
         />
-        <ButtonGroup />
       </Wrapper>
     );
   }
