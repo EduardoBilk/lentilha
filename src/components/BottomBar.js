@@ -32,7 +32,6 @@ class BottomBar extends Component {
       <Paper zDepth={1}>
         <BottomNavigation selectedIndex={this.state.selectedIndex}>
           <BottomNavigationItem label="sexo" icon={venusMarsIco} onClick={() => this.select(0)} />
-
           <BottomNavigationItem label="semanas" icon={pregnantIco} onClick={() => this.select(1)} />
         </BottomNavigation>
       </Paper>
