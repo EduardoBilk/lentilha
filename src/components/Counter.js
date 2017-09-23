@@ -43,7 +43,7 @@ class Counter extends Component {
     return (
       <div className="counter-wrapper">
         <CounterText>
-          Lentilha está com {this.state.weeksCount} semanas e {this.state.daysCount} dia{this.state.daysCount > 1 ? 's' : ''}
+          Bebê está com {this.state.weeksCount} semanas e {this.state.daysCount} dia{this.state.daysCount > 1 ? 's' : ''}
         </CounterText>
 
         <MonthConvertedText>
