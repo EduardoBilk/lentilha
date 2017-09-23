@@ -13,9 +13,9 @@ class SexPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mHeight: 0,
+      mHeight: 80,
       mCount: 0,
-      fHeight: 0,
+      fHeight: 60,
       fCount: 0
     };
   }
@@ -23,7 +23,12 @@ class SexPage extends Component {
   render() {
     return (
       <Wrapper>
-        <Chart height1="100" bg1="rgba(185, 199, 183, 1.0)" height2="80" bg2="rgba(239, 193, 187, 1.0)" />
+        <Chart
+          height1={this.state.mHeight}
+          bg1="rgba(185, 199, 183, 1.0)"
+          height2={this.state.fHeight}
+          bg2="rgba(239, 193, 187, 1.0)"
+        />
       </Wrapper>
     );
   }

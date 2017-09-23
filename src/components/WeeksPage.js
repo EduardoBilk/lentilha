@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Title from './Title';
 import Counter from './Counter';
 
 const Wrapper = styled.div`
