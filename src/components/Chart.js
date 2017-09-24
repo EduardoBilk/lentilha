@@ -24,9 +24,9 @@ const ChartData = styled.span`
   animation: draw 1s ease-in-out;
 `;
 const clickHandler = e => {
-  console.log(e.target.dataset.value);
-  db.ref('choices').push(e.target.dataset.value, () => {
-    console.log(`Sucesso no envio de ${e.target.dataset.value} apra o db.`);
+  const v = e.target.dataset.value;
+  db.ref('choices').push(v, () => {
+    console.log(`Sucesso no envio de ${v} apra o db.`);
   });
 };
 const Chart = props => (
@@ -34,16 +34,18 @@ const Chart = props => (
     <ChartItem>
       <ChartData
         style={{ height: props.height1 + '%', background: props.bg1 }}
-        title="ACHO QUE TEM PIPI"
+        title="acho que tem pipi"
         data-value="M"
+        data-count={props.count1}
         onClick={clickHandler}
       />
     </ChartItem>
     <ChartItem>
       <ChartData
         style={{ height: props.height2 + '%', background: props.bg2 }}
-        title="ACHO QUE TEM PEPECA"
+        title="acho que tem pepeca"
         data-value="F"
+        data-count={props.count2}
         onClick={clickHandler}
       />
     </ChartItem>

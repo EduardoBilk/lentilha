@@ -12,6 +12,7 @@ span:after {
   padding: 5px 1em 0;
   display: block;
   text-align: center;
-  content: attr(title);
+  content: attr(title) ' ('attr(data-count) ')';
   word-wrap: break-word;
+  padding-top: 5%;
 }
