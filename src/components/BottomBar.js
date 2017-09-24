@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import { BottomNavigation, BottomNavigationItem } from 'material-ui/BottomNavigation';
 import Paper from 'material-ui/Paper';
-import VenusMarsIco from './VenusMarsIcon';
+import VenusMarsIco from 'material-ui/svg-icons/places/child-friendly';
 import PregnantIco from 'material-ui/svg-icons/action/pregnant-woman';
 
 const venusMarsIco = <VenusMarsIco />;

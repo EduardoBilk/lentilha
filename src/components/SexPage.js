@@ -7,11 +7,10 @@ const Wrapper = styled.div`
   height: 92vh;
   display flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: rgba(254, 203, 131, 0.3);
 `;
-let votes = [];
+
 class SexPage extends Component {
   constructor(props) {
     super(props);
@@ -24,13 +23,14 @@ class SexPage extends Component {
     this.updateVotes = this.updateVotes.bind(this);
   }
   componentWillMount() {
+    let votes = [];
     let choiceRef = db.ref('choices').orderByKey();
     choiceRef.on('child_added', snapshot => {
       votes.push(snapshot.val());
-      this.updateVotes();
+      this.updateVotes(votes);
     });
   }
-  updateVotes() {
+  updateVotes(votes) {
     const count = {};
     const len = votes.length;
 
